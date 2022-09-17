@@ -905,7 +905,7 @@ border: 1px solid var(--bored-color);
 
 .checkbox:checked + .checkbox-icon {
     background-color: var(--active-color);
-    background-image: url(/images/icons/check.svg);
+    background-image: url(../images/icons/check.svg);
     border: transparent;
     background-size: contain;
     background-origin: border-box;
