@@ -603,8 +603,7 @@ border: 1px solid var(--bored-color);
 }
 
 .footer-join {
-    align-items: center;
-    margin-left: 70px;
+     margin-left: auto;
 }
 
 .join {
@@ -761,7 +760,7 @@ border: 1px solid var(--bored-color);
     left: 50%;
     transform: translate(-50%,-50%) scale(1);
     width: 528px;
-    height: 581px;
+    padding: 40px;
     background-color: #FFFFFF;
     border-radius: 4px;
     box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
@@ -780,7 +779,7 @@ border: 1px solid var(--bored-color);
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    background-color: #ffffff;
+    background-color: var(--white-color);
     cursor: pointer;
 }
 
@@ -791,7 +790,6 @@ border: 1px solid var(--bored-color);
 }
 
 .modal-text {
-    margin-top: 40px;
     margin-bottom: 30px;
     text-align: center;
     font-weight: 700;
@@ -803,8 +801,6 @@ border: 1px solid var(--bored-color);
 .form-field {
     position: relative;
     display: block;
-    margin-left: 40px;
-    margin-right: 40px;
     margin-bottom: 28px;
 }
 
@@ -813,16 +809,18 @@ border: 1px solid var(--bored-color);
 }
 
 .form-input {
-    width: 448px;
+    width: 100%;
     height: 40px;
     padding-left: 42px;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
 }
 
-.form-input:focus {
+.form-input:focus , .form-input:hover , .form-input:hover ~ .icon , .form-input:focus ~ .icon {
     outline: none;
     border-color: var(--active-color);
+    transition: border-color 250ms var(--cubic ) , fill 250ms var(--cubic );
+    fill: var(--active-color);
 }
 
 .form-label {
@@ -836,7 +834,7 @@ border: 1px solid var(--bored-color);
     color: var(--secondary-color);
 }
 
-.form-field .icon {
+.icon {
     position: absolute;
     top: 50%;
     left: 15px;
@@ -878,10 +876,6 @@ border: 1px solid var(--bored-color);
     border-radius: 4px;
 }
 
-.form-input:focus ~ .icon {
-    fill: var(--active-color);
-}
-
 .button {
     width: 200px;
     height: 50px;
@@ -896,6 +890,7 @@ border: 1px solid var(--bored-color);
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.06em;
+    cursor: pointer;
     transition: color 250ms var(--cubic ), background-color 250ms var(--cubic );
 }
 
@@ -926,20 +921,19 @@ border: 1px solid var(--bored-color);
     color: var(--white-color);
 }
 
-.mail-label {
-    position: absolute;
-    left: 16px;
-    transform: translateY(50%);
-    transition: transform 250ms var(--cubic );
-}
-
 .submit {
     display: inline-flex;
     align-items: center;
     padding-left: 29px;
     margin-left: 12px;
+    cursor: pointer;
 }
 
 .submit-icon {
     margin: 13px 28px 13px 10px;
+}
+
+.exit-icon:hover{
+    fill: var(--active-color);
+    transition: fill 250ms var(--cubic )
 }
