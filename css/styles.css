@@ -924,16 +924,16 @@ border: 1px solid var(--bored-color);
 .submit {
     display: inline-flex;
     align-items: center;
-    padding-left: 29px;
+    justify-content: center;
     margin-left: 12px;
     cursor: pointer;
 }
 
 .submit-icon {
-    margin: 13px 28px 13px 10px;
+   margin-left: 10px;
 }
 
-.exit-icon:hover{
+.modal-exit:hover{
     fill: var(--active-color);
     transition: fill 250ms var(--cubic )
 }
